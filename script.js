@@ -438,6 +438,11 @@ function startRoute() {
 
   if (!car || !path) return;
 
+  mapCard?.scrollIntoView({
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+    block: "center",
+  });
+
   if (routeAnimationFrame) {
     cancelAnimationFrame(routeAnimationFrame);
   }
