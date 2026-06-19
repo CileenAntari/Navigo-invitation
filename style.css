@@ -73,8 +73,19 @@ body {
   border-bottom: 1px solid var(--border-light);
   padding: 16px 24px;
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topbar-row {
+  width: 100%;
+}
+
+.topbar-brand-row {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .brand {
@@ -113,7 +124,9 @@ body {
 .top-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
+  width: 100%;
 }
 
 .lang-switch {
@@ -722,7 +735,7 @@ h1 span {
 .ticket-card {
   padding: 22px;
   position: sticky;
-  top: 110px;
+  top: 130px;
   transition: border-color 0.4s, box-shadow 0.4s;
 }
 
@@ -1039,6 +1052,10 @@ html[dir="rtl"] .brand {
   direction: rtl;
 }
 
+html[dir="rtl"] .top-actions {
+  justify-content: flex-start;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1073,17 +1090,12 @@ html[dir="rtl"] .brand {
 }
 
 @media (max-width: 580px) {
-  .topbar { padding: 12px; flex-wrap: wrap; gap: 10px; }
-  .top-actions {
-    width: 100%;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .lang-switch { order: -1; margin-inline-end: auto; }
+  .topbar { padding: 12px; gap: 10px; }
+  .top-actions { gap: 8px; }
   .brand img { width: 48px; height: 48px; }
   .brand h2 { font-size: 20px; }
   .top-link { padding: 8px 11px; font-size: 12px; }
+  .lang-btn { padding: 7px 10px; font-size: 12px; }
   .hero-content { padding: 24px; }
   h1 { letter-spacing: -1.4px; }
   .map-card { min-height: 560px; }
