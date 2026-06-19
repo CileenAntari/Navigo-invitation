@@ -1074,12 +1074,16 @@ html[dir="rtl"] .brand {
 
 @media (max-width: 580px) {
   .topbar { padding: 12px; flex-wrap: wrap; gap: 10px; }
-  .top-actions { width: 100%; justify-content: flex-end; flex-wrap: wrap; }
-  .top-link.ghost { display: none; }
-  .lang-switch { order: -1; }
+  .top-actions {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .lang-switch { order: -1; margin-inline-end: auto; }
   .brand img { width: 48px; height: 48px; }
   .brand h2 { font-size: 20px; }
-  .top-link { padding: 10px 12px; font-size: 13px; }
+  .top-link { padding: 8px 11px; font-size: 12px; }
   .hero-content { padding: 24px; }
   h1 { letter-spacing: -1.4px; }
   .map-card { min-height: 560px; }
